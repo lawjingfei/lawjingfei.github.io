@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" >
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="lightbox/lightbox.css" rel="stylesheet" />
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="header">
+        <a href="#home" class="logo"><img src="images/logo.svg" style="width: 50%; height: 50%"></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a> 
+            <a href="#project">Project</a>
+            <a href="#resume">Resume</a>
+            <a href="#others">Others</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello, I'm <span>Jing Fei</span></h1>
+            <h3 class="text-animation">I'm a <span id="animation">
+            </span></h3>
+        </div>
+        <div class="home-img">
+            <img src="images/ljf.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section class="project" id="project">
+        <audio id="clickSound" src="audio/website intro.mp3"></audio>
+
+        <h5 class="headingProject">
+            Lastest <span>Project(s)</span>
+        </h5>
+
+        <ul class="project-filter">
+            <li class="list project-filter-active" data-filter="all">All</li>
+            <li class="list" data-filter="art">Art</li>
+            <li class="list" data-filter="design">Design</li>
+            <li class="list" data-filter="creative">Creative</li>
+        </ul>
+
+        <div class="project-container">
+            <a href="images/project1.jpg" class="project-box art" data-lightbox="work">
+                <img src="images/project1.jpg" alt="work">
+            </a>
+            <a href="images/project2.jpg" class="project-box design" data-lightbox="work">
+                <img src="images/project2.jpg" alt="work">
+            </a>
+            <a href="images/project3.jpg" class="project-box creative" data-lightbox="work">
+                <img src="images/project3.jpg" alt="work">
+            </a>
+            <a href="images/project4.jpg" class="project-box art" data-lightbox="work">
+                <img src="images/project4.jpg" alt="work">
+            </a>
+            <a href="images/project5.jpg" class="project-box design" data-lightbox="work">
+                <img src="images/project5.jpg" alt="work">
+            </a>
+            <a href="images/project6.jpg" class="project-box creative" data-lightbox="work">
+                <img src="images/project6.jpg" alt="work">
+            </a>
+        </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+
+    <section class="resume" id="resume">
+        <h5 class="headingResume">
+            My <span>Resume</span>
+        </h5>
+
+        <div class="resume-container">
+            <div class="profile">
+                <div class="profile-container">
+                    <img src="./images/ljf-profile.JPG" alt="shaif arfan" style="width: 25%;">
+                    <div>
+                        <h1 class="profile-name">
+                            Law <span>Jing Fei</span>
+                        </h1>
+                        <p class="profile-title">Fashion Designer / Photographer</p>
+                        <p class="resume-description profile-description">
+                            A full-time university student looking for job where I can gain some working experience. Able to start work immediately.
+                        </p>
+                        <a class="downloadBtn" href="resume/resume.pdf" download="resume.pdf">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-1">
+                <div class="expertise">
+                    <h3 class="title">Expertise</h3>
+                    <ul class="expertise-list resume-description">
+                        <li>Adobe Photshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe After Effects</li>
+                    </ul>
+                </div>
+
+                <div class="edu">
+                    <h3 class="title">Education</h3>
+
+                    <div class="edu-item">
+                        <p class="item-preTitle">Jul 2023 - Present</p>
+                        <h4 class="item-title">Diploma in Multimedia Design</h4>
+                        <p class="item-subtitle">
+                            Tunku Abdul Rahman University of Management and Technology
+                        </p>
+                    </div>
+
+                    <div class="edu-item">
+                        <p class="item-preTitle">Jan 2018 - Apr 2023</p>
+                        <h4 class="item-title">SMK Batu Unjur</h4>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h3 class="title">Skills</h3>
+
+                    <div class="skill-item">
+                        <h4 class="skill-name">Communication</h4>
+                        <p class="resume-description">
+                            I can understand and communicate with Mandarin, English, 
+                            Malay and Hokkien fluently. As well as good in entertaining people.
+                        </p>
+                    </div>
+
+                    <div class="skill-item">
+                        <h4 class="skill-name">Teamwork</h4>
+                        <p class="resume-description">
+                            I have many experiences playing in a band as a drummer.
+                            I truly understand what it means to be a part of something bigger than myself.
+                            This had taught me how to work wit ha group to accomplish a shared goal.
+                        </p>
+                    </div>
+
+                    <div class="skill-item">
+                        <h4 class="skill-name">Leadership</h4>
+                        <p class="resume-description"> 
+                            As a group representative, I demonstrated strong leadership skills by 
+                            facililating communication between teachers and students. 
+                            I was responsible for controlling the class when the tutor was not around.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="language">
+                    <h3 class="title">Language</h3>
+                    <div class="language-item">
+                        <div class="item-title">Mandarin</div>
+                        <p class="item-subtitle">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="item-title">Hokkien</div>
+                        <p class="item-subtitle">&#9734; &#9733; &#9733; &#9733; &#9733;</p>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="item-title">English</div>
+                        <p class="item-subtitle">&#9734; &#9734; &#9733; &#9733; &#9733;</p>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="item-title">Malay</div>
+                        <p class="item-subtitle">&#9734; &#9734; &#9733; &#9733; &#9733;</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-2">
+                <div class="exp">
+                    <h3 class="title">Experience</h3>
+
+                    <div class="exp-item">
+                        <p class="item-preTitle">Oct 2022 - Dec 2022</p>
+                        <h4 class="item-title">Ding Whay Chicken Claypot</h4>
+                        <p class="item-subtitle">Part time worker</p>
+                        <p class=" resume-description">
+                            As a part-time restaurant worker, I honed my ability to thrive in a fast-paced, 
+                            customer-focused environment.  I mastered effective communication, teamwork, 
+                            and problem-solving skills while ensuring excellent service and maintaining 
+                            a positive attitude under pressure.
+                        </p>
+                    </div>
+
+                    <div class="exp-item">
+                        <p class="item-preTitle">Apr 2023 - June 2023</p>
+                        <h4 class="item-title">Eco Gadget Store</h4>
+                        <p class="item-subtitle">Full time worker</p>
+                        <p class=" resume-description">
+                            As a full-time worker in a phone gadget shop, I developed strong customer service 
+                            and problem-solving skills while gaining in-depth knowledge of the latest mobile devices, 
+                            operating systems, and accessories. I am adept at explaining complex technical concepts 
+                            to customers and enjoy helping them find the best solutions to meet their needs.
+                        </p>
+                    </div>
+
+                    <div class="exp-item">
+                        <p class="item-preTitle">Oct 2023 - Nov 2023 , Jan 2024 - Feb 2024</p>
+                        <h4 class="item-title">Chun Yang Tea</h4>
+                        <p class="item-subtitle">Part time worker</p>
+                        <p class=" resume-description">
+                            Developed strong customer service skills in a fast-paced tea shop environment.  
+                            Gained proficiency in tea preparation, order taking, and handling point-of-sale 
+                            transactions to create a positive customer experience
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="title">Project</h3>
+                    <div class="project-item">
+                        <h4 class="item-title">Drawing Potraits</h4>
+                        <p class=" resume-description">
+                            Executed detailed portrait studies focusing on accurate 
+                            representation, demonstrating skills in value, texture, and perspective.
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <h4 class="item-title">Poster Design</h4>
+                        <p class=" resume-description">
+                            Independently designed a promotional poster that 
+                            successfully balanced visual appeal with informative content.
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <h4 class="item-title">2D Animation</h4>
+                        <p class=" resume-description">
+                            Rigged and animated complex characters for a 2D project, demonstrating 
+                            an understanding of movement dynamics and personality development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="group-3">
+                <div class="contact">
+                    <h3 class="title">Contact</h3>
+                    <div class="contact-info">
+                        <p class="contact-item">
+                            Klang, Selangor
+                        </p>
+
+                        <p class="contact-item">
+                            +60 12-345-6789
+                        </p>
+                        
+                        <p class="contact-item">
+                            jingfeilaw@gmail.com
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="social">
+                    <h3 class="title">Socials</h3>
+                    <div class="social-items">
+                        <a href="#" target="_b" class="social-item ">
+                            <i class='bx bxl-facebook-square'></i>
+                            /lawjingfei
+                        </a>
+                        <a href="#" target="_blank" class="social-item">
+                            <i class='bx bxl-instagram' ></i>
+                            /lawjingfei
+                        </a>
+                        <a href="#" target="_blank" class="social-item">
+                            <i class='bx bxl-linkedin-square' ></i>
+                            /lawjingfei
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="headingContact">
+            Contact <span>me</span>
+        </h2>
+
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#contact">FAQ</a>
+            </li>
+            <li>
+                <a href="#project">Project</a>
+            </li>
+            <li>
+                <a href="#resume">Resume</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#">Others</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            @ Jing Fei | All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="jQuery.js"></script>
+    <script src="lightbox/lightbox-plus-jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
