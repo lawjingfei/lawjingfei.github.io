@@ -27,25 +27,6 @@ $(document).ready(function(){
     });
 });
 
-// Play the audio once trigger the button
-$(document).on('click', '.project-filter li', function() {
-    // Get the audio element
-    let audio = document.getElementById("clickSound"); 
-
-    // Ensure the audio has loaded (optional, if you preloaded it)
-    audio.addEventListener('canplaythrough', function() {
-    audio.play(); 
-    });
-
-    // If you didn't preload, load and then play
-    if (audio.readyState < 3) { // Check if audio isn't loaded yet
-        audio.load();
-        audio.play();
-    } else {
-      audio.currentTime = 0; // Reset audio to the start if already loaded
-        audio.play();
-    }
-});
 
 
 
