@@ -431,13 +431,6 @@ hr {
     font-weight: 400;
 }
 
-@media(max-width: 768px) {
-    .photo-gallery {
-        flex-direction: column;
-    }
-}
-
-
 /* CSS for contact section */
 
 .headingContact {
@@ -701,6 +694,10 @@ hr {
         font-weight: 200;
         font-size: 4.5rem;
         display: block;
+    }
+
+    .photo-gallery {
+        flex-direction: column;
     }
 
     .footer ul{
