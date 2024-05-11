@@ -674,6 +674,11 @@ hr {
         font-size: 40%;
     }
 
+    .home-content h1 {
+        font-size: 4.8rem;
+        margin-top: 3rem;
+    }
+
     .project-filter li {
         margin: 5px;
         padding: 5px 10px;
