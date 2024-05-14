@@ -672,6 +672,14 @@ hr {
         margin-top: 3rem;
     }
 
+    .project-filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+
     .project-filter li {
         margin: 5px;
         padding: 5px 10px;
