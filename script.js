@@ -27,6 +27,18 @@ $(document).ready(function(){
     });
 });
 
+// Email validation functions 
+function validateEmail(email) {
+    // regex validation
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Phone number validation functions 
+function validatePhoneNumber(phone) {
+    // regex validation
+    return /^\d{10,12}$/.test(phone); // check for 10-12 digit numbers
+}
+
 //toast notifications after submit the form
 function popUp() {
     const Toast = Swal.mixin({
@@ -45,31 +57,106 @@ function popUp() {
         }
     });
     
-    Toast.fire({
-        icon: "success",
-        title: "Send Message Successfully",
-        iconColor: "#FFA31A",
-    });
+    // bool to check if data fields are null
+    let isValid = true; 
+
+    // Get individual input fields
+    const fullName = document.querySelector('.input-name');
+    const email = document.querySelector('.input-email');
+    const phone = document.querySelector('.input-phoneNo');
+    const subject = document.querySelector('.input-subject');
+    const message = document.querySelector('.input-msg');
+
+    // Validate each field and display the first error encountered
+    if (!fullName.value.trim()) {
+        Toast.fire({
+            icon: "error",
+            title: "Invalid name!",
+            iconColor: "#FFA31A",
+        });
+        fullName.focus();
+        isValid = false;
+        return; 
+    }
+
+    if (!validateEmail(email.value.trim())) {
+        Toast.fire({
+            icon: "error",
+            title: "Invalid email!",
+            iconColor: "#FFA31A",
+        });
+        email.focus();
+        isValid = false;
+        return;
+    }
+
+    if (!validatePhoneNumber(phone.value.trim())) {
+        Toast.fire({
+            icon: "error",
+            title: "Invalid phone number!",
+            iconColor: "#FFA31A",
+        });
+        phone.focus();
+        isValid = false;
+        return;
+    }
+
+    if (!subject.value.trim()) {
+        Toast.fire({
+            icon: "error",
+            title: "Invalid subject!",
+            iconColor: "#FFA31A",
+        });
+        subject.focus();
+        isValid = false;
+        return;
+    }
+
+    if (!message.value.trim()) {
+        Toast.fire({
+            icon: "error",
+            title: "Invalid message!",
+            iconColor: "#FFA31A",
+        });
+        message.focus();
+        isValid = false;
+        return;
+    }
+
+    // If all data fields are not null, prompt success message
+    if (isValid) {
+        Toast.fire({
+            icon: "success",
+            title: "Send Message Successfully",
+            iconColor: "#FFA31A",
+        });
+
+        // Clear all input fields
+        [fullName, email, phone, subject, message].forEach(field => field.value = '');
+    }
 }
 
-//responsive navigation bar
+// Responsive navigation bar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 function handleScroll() {
-sections.forEach(sec => {
+    sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id'); 
 
+        // Check if the section is in view
         if (top >= offset && top < offset + height) {
+            // Deactivate all active link
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
 
+            // Activate the correct link
             let targetLink = document.querySelector(`header nav a[href*="${id}"]`); 
             if (targetLink) { 
                 targetLink.classList.add('active');
@@ -79,25 +166,31 @@ sections.forEach(sec => {
 }
 
 let scrolling = false; 
+
 function requestScrollUpdate() {
     if (!scrolling) {
         scrolling = true;
         requestAnimationFrame(() => {
             handleScroll();
+            // Allow the next scroll update
             scrolling = false;
         });
     }
 }
 
+// Event listener for scroll to be responsive
 window.addEventListener('scroll', requestScrollUpdate);
+
+// For phone view
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 });
 
+// Initial scroll to home section
 window.onload = function() {
     const homeSection = document.getElementById('home');
     if (homeSection) {
-        homeSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+        homeSection.scrollIntoView({ behavior: 'smooth' }); // For smooth scrolling
     }
 };
