@@ -27,6 +27,32 @@ $(document).ready(function(){
     });
 });
 
+//toast notifications after submit the form
+function popUp() {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "bottom-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        },
+        customClass: {
+            container: 'swal2-toast', 
+            popup: 'swal2-toast-border'
+        }
+    });
+    
+    Toast.fire({
+        icon: "success",
+        title: "Send Message Successfully",
+        iconColor: "#FFA31A",
+    });
+}
+
+//responsive navigation bar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
@@ -37,14 +63,13 @@ sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
-        let id = sec.getAttribute('id'); // Get the section's ID
+        let id = sec.getAttribute('id'); 
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
 
-            // Corrected selector to find the link by its href attribute
             let targetLink = document.querySelector(`header nav a[href*="${id}"]`); 
             if (targetLink) { 
                 targetLink.classList.add('active');
@@ -64,7 +89,6 @@ function requestScrollUpdate() {
     }
 }
 
-// Event Listeners (with optimization)
 window.addEventListener('scroll', requestScrollUpdate);
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
@@ -77,8 +101,3 @@ window.onload = function() {
         homeSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
     }
 };
-
-
-
-
-
