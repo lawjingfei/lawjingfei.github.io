@@ -1,4 +1,4 @@
-// Typed js animation for home section
+// Typed.js animation for home section
 let typed = new Typed('#animation', {
     strings: ['Photographer.', 
     'Fashion Designer.'],
@@ -8,8 +8,9 @@ let typed = new Typed('#animation', {
     loop: true
     });
 
-// Remove active class to make it responsive
+// Deactivate the current project filter
 $(document).on('click','.project-filter li', function(){
+    // Activate the correct project filter
     $(this).addClass('project-filter-active').siblings().removeClass('project-filter-active')
 });
 
@@ -39,7 +40,7 @@ function validatePhoneNumber(phone) {
     return /^\d{10,12}$/.test(phone); // check for 10-12 digit numbers
 }
 
-//toast notifications after submit the form
+// Toast notification after submit the form
 function popUp() {
     const Toast = Swal.mixin({
         toast: true,
@@ -142,6 +143,7 @@ let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+// Navigation link will be highlighted 
 function handleScroll() {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -167,6 +169,7 @@ function handleScroll() {
 
 let scrolling = false; 
 
+// Optimize scroll handling
 function requestScrollUpdate() {
     if (!scrolling) {
         scrolling = true;
@@ -187,7 +190,7 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// Initial scroll to home section
+// Redirect to home section after reload
 window.onload = function() {
     const homeSection = document.getElementById('home');
     if (homeSection) {

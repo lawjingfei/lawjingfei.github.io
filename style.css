@@ -582,6 +582,7 @@ hr {
     color: white;
 }
 
+/* Media query for pad view */
 @media(max-width: 1285px) {
     html {
         font-size: 55%;
@@ -676,6 +677,7 @@ hr {
     }
 }
 
+/* Media query for phone view */
 @media(max-width: 600px) {
     html {
         font-size: 40%;
