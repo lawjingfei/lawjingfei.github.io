@@ -127,13 +127,13 @@ span{
 	color: var(--main-color);
 }
 
-.expertise-list {
+.expertise-list, .curricular-list {
 	margin-top: 1rem;
 	margin-left: 2rem;
 	line-height: 2;
 }
 
-.edu-item , .skill-item ,.language-item , .exp-item , .project-item , .social-items {
+.edu-item , .skill-item ,.language-item , .curricular-item , .project-item , .social-items {
 	margin-top: 2rem;
 }
 
