@@ -17,6 +17,18 @@
     --secondary-color: rgb(114,113,113);
 }
 
+/* For Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 html {
     font-size: 60%;
     overflow-x: hidden;
