@@ -11,9 +11,9 @@
 
 :root {
     --bg-colour: rgb(0, 0, 0);
-    --second-bg-colour: rgb(0,0,0);
-    --text-color: white;
-    --main-color: rgb(255,163,26);
+    --second-bg-colour: rgb(255,255,255);
+    --text-color: rgb(0, 0, 0);
+    --main-color: rgb(249, 110, 42);
     --secondary-color: rgb(114,113,113);
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 span{
-    color: var(--main-color)
+    color: var(--main-color);
 }
 
 .resume-description {
@@ -52,7 +52,7 @@ span{
 
 .item-title {
 	font-size: 1.6rem;
-	color: white;
+	color: rgb(255, 153, 0);
 	font-weight: 500;
 	margin: 0.8rem 0;
 }
@@ -69,14 +69,14 @@ span{
 	margin: 0 auto;
 	display: grid;
 	padding: 5rem;
-	background: #070707;
+	background: var(--second-bg-colour);
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
 }
 
 .profile {
 	grid-column: 1 / -1;
-	margin-bottom: 2rem;
+	margin-bottom: 0.5rem;
 }
 
 .group-1 , .group-2 {
@@ -122,6 +122,7 @@ span{
 	font-size: 1.6rem;
 	margin-top: 1rem;
 }
+
 .downloadBtn:hover {
 	color: var(--main-color);
 }
@@ -132,15 +133,7 @@ span{
 	line-height: 2;
 }
 
-.skill-item {
-	margin-top: 2rem;
-}
-.skill-name {
-	font-size: 1.6rem;
-	font-weight: 700;
-}
-
-.edu-item ,.language-item, .exp-item , .project-item , .social-items {
+.edu-item , .skill-item ,.language-item , .exp-item , .project-item , .social-items {
 	margin-top: 2rem;
 }
 
@@ -166,8 +159,8 @@ hr {
 	grid-column: 1/-1;
 	width: 80%;
 	margin: 0 auto;
-	margin-top: 5rem;
-	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 	border: none;
 	border-top: 2px solid rgba(128, 128, 128, 0.229);
 }

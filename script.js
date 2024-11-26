@@ -42,6 +42,13 @@ function validatePhoneNumber(phone) {
 
 // Toast notification after submit the form
 function popUp() {
+
+     // Trigger the <a> link to navigate to #contact
+    const link = document.getElementById('contact-link');
+    if (link) {
+        link.click();
+    }
+    
     const Toast = Swal.mixin({
         toast: true,
         position: "bottom-end",
