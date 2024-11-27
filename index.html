@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-    <link href="lightbox/lightbox.css" rel="stylesheet" />
 
     <!-- FAVICON -->
     <link rel="icon" type="image/ico" href="images/favicon.ico">
@@ -73,54 +72,264 @@
     <!-- PROJECT SECTION -->
     <section class="project" id="project">
         <h5 class="headingProject">
-            Lastest <span>Project(s)</span>
+            Lastest <span>Project(s)</span> 
+            <a href="#"><i class='bx bx-link-external'></i></a>
         </h5>
 
-        <ul class="project-filter">
-            <li class="list project-filter-active" data-filter="all">All</li>
-            <li class="list" data-filter="symbolism">Symbolism</li>
-            <li class="list" data-filter="landscape">Landscape</li>
-            <li class="list" data-filter="fashion">Fashion</li>
+        <ul class="filter-list">
+            <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+                <button data-filter-btn>Logo</button>
+            </li>
+
+            <li class="filter-item">
+                <button data-filter-btn>3D</button>
+            </li>
+
+            <li class="filter-item">
+                <button data-filter-btn>Photography</button>
+            </li>
+
+            <li class="filter-item">
+                <button data-filter-btn>Poster</button>
+            </li>
+
+            <li class="filter-item">
+                <button data-filter-btn>Realistic Drawing</button>
+            </li>
         </ul>
 
-        <div class="project-container">
-            <a href="images/Fashion/project1.jpg" class="project-box fashion" data-lightbox="work">
-                <img src="images/Fashion/project1.jpg" alt="">
-            </a>
-            <a href="images/Symbolism/project1.JPG" class="project-box symbolism" data-lightbox="work">
-                <img src="images/Symbolism/project1.JPG" alt="">
-            </a>
-            <a href="images/Symbolism/project2.JPG" class="project-box symbolism" data-lightbox="work">
-                <img src="images/Symbolism/project2.JPG" alt="">
-            </a>
-            <a href="images/Landscape/project1.jpg" class="project-box landscape" data-lightbox="work">
-                <img src="images/Landscape/project1.jpg" alt="">
-            </a>
-            <a href="images/Symbolism/project3.JPG" class="project-box symbolism" data-lightbox="work">
-                <img src="images/Symbolism/project3.JPG" alt="">
-            </a>
-            <a href="images/Landscape/project2.jpg" class="project-box landscape" data-lightbox="work">
-                <img src="images/Landscape/project2.jpg" alt="">
-            </a>
-            <a href="images/Landscape/project3.jpg" class="project-box landscape" data-lightbox="work">
-                <img src="images/Landscape/project3.jpg" alt="">
-            </a>
-            <a href="images/Landscape/project4.jpg" class="project-box landscape" data-lightbox="work">
-                <img src="images/Landscape/project4.jpg" alt="">
-            </a>
-            <a href="images/Symbolism/project4.JPG" class="project-box symbolism" data-lightbox="work">
-                <img src="images/Symbolism/project4.JPG" alt="">
-            </a>
-            <a href="images/Landscape/project5.png" class="project-box landscape" data-lightbox="work">
-                <img src="images/Landscape/project5.png" alt="">
-            </a>
-            <a href="images/Symbolism/project5.JPG" class="project-box symbolism" data-lightbox="work">
-                <img src="images/Symbolism/project5.JPG" alt="">
-            </a>
-            <a href="images/Fashion/project2.jpg" class="project-box fashion" data-lightbox="work">
-                <img src="images/Fashion/project2.jpg" alt="">
-            </a>
+        <div class="filter-select-box">
+            <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon">
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </button>
+
+            <ul class="select-list">
+                <li class="select-item">
+                    <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                    <button data-select-item>Logo</button>
+                </li>
+
+                <li class="select-item">
+                    <button data-select-item>3D</button>
+                </li>
+
+                <li class="select-item">
+                    <button data-select-item>Photography</button>
+                </li>
+
+                <li class="select-item">
+                    <button data-select-item>Poster</button>
+                </li>
+
+                <li class="select-item">
+                    <button data-select-item>Realistic Drawing</button>
+                </li>
+            </ul>
         </div>
+
+        <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="logo">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Logo/signature.png" alt="signature" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Signature</h3>
+                    <p class="project-category">Logo</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="logo">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Logo/signature variation.png" alt="signature variation" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Signature Variation</h3>
+                    <p class="project-category">Logo</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="3d">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/3D/objects.jpg" alt="objects" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Objects</h3>
+                    <p class="project-category">3D</p>
+
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="3d">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/3D/sofa.jpeg" alt="sofa" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Sofa</h3>
+                    <p class="project-category">3D</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="3d">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/3D/sunglasses.jpg" alt="sunglasses" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Sunglasses</h3>
+                    <p class="project-category">3D</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/sunset.jpeg" alt="sunset" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Sunset</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/bukitbintang.jpg" alt="bukitbintang" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Bukit Bintang Street View</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model1.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model2.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model3.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model4.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model5.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="photography">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Photography/model6.jpeg" alt="model" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Model</h3>
+                    <p class="project-category">Photography</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="poster">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Poster/courage.png" alt="courage" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Courage</h3>
+                    <p class="project-category">Poster</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="realistic drawing">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Realistic Drawing/ear.jpg" alt="ear" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Ear</h3>
+                    <p class="project-category">Realisitic Drawing</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="realistic drawing">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Realistic Drawing/eye.jpg" alt="eye" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Eye</h3>
+                    <p class="project-category">Realisitic Drawing</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="realistic drawing">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Realistic Drawing/lips.jpg" alt="lips" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Lips</h3>
+                    <p class="project-category">Realisitic Drawing</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="realistic drawing">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Realistic Drawing/nose.jpg" alt="nose" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Nose</h3>
+                    <p class="project-category">Realisitic Drawing</p>
+                </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="realistic drawing">
+                <a href="#">
+                    <figure class="project-img">
+                        <img src="images/Realistic Drawing/women playing tennis.jpg" alt="women playing tennis" loading="lazy">
+                    </figure>
+                    <h3 class="project-title">Women Playing Tennis</h3>
+                    <p class="project-category">Realisitic Drawing</p>
+                </a>
+            </li>
+
+        </ul>
     </section>
 
     <!-- RESUME SECTION -->
