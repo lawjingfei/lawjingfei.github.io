@@ -24,11 +24,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* For Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 html {
     font-size: 60%;
     overflow-x: hidden;
