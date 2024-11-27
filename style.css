@@ -63,7 +63,7 @@ span{
 	z-index: 7;
 	overflow: hidden;
 	animation: loader 2s ease-in-out 2s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 
 .loader .intro{
@@ -79,16 +79,19 @@ span{
     display: inline-block;
     animation: wavy 1s ease-in-out infinite;
     animation-delay: calc(0.1s * var(--i));
+    animation-fill-mode: forwards;
 }
 
-@keyframes loader{
-	0%{
+@keyframes loader {
+    0% {
         opacity: 1;
-	}
-	100%{
-		opacity: 0;
-		z-index: -5;
-	}
+    }
+    60% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* CSS for navbar */
@@ -714,6 +717,12 @@ hr {
         display: block;
     }
 
+    .loader{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
     .intro-title span {
         font-size: 6rem;
     }
@@ -773,6 +782,12 @@ hr {
 @media(max-width: 600px) {
     html {
         font-size: 40%;
+    }
+
+    .loader{
+        position: fixed;
+        width: 100%;
+        height: 100%;
     }
 
     .intro-title span {
