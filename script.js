@@ -1,3 +1,12 @@
+// Preload js to remove the loader div
+window.addEventListener("load", () => {
+    const loader = document.querySelector('.loader');
+
+    loader.addEventListener('animationend', () => {
+        loader.remove();
+    });
+});
+
 // Typed.js animation for home section
 let typed = new Typed('#animation', {
     strings: ['Photographer.', 
