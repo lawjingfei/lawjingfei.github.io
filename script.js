@@ -116,11 +116,11 @@ function popUp() {
     let isValid = true; 
 
     // Get individual input fields
-    const fullName = document.querySelector('.input-name');
-    const email = document.querySelector('.input-email');
-    const phone = document.querySelector('.input-phoneNo');
-    const subject = document.querySelector('.input-subject');
-    const message = document.querySelector('.input-msg');
+    const fullName = document.getElementById('input-name');
+    const email = document.getElementById('input-email');
+    const phone = document.getElementById('input-phoneNo');
+    const subject = document.getElementById('input-subject');
+    const message = document.getElementById('input-msg');
 
     // Validate each field and display the first error encountered
     if (!fullName.value.trim()) {
@@ -129,7 +129,6 @@ function popUp() {
             title: "Invalid name!",
             iconColor: "#FFA31A",
         });
-        fullName.focus();
         isValid = false;
         return; 
     }
@@ -140,7 +139,6 @@ function popUp() {
             title: "Invalid email!",
             iconColor: "#FFA31A",
         });
-        email.focus();
         isValid = false;
         return;
     }
@@ -151,7 +149,6 @@ function popUp() {
             title: "Invalid phone number!",
             iconColor: "#FFA31A",
         });
-        phone.focus();
         isValid = false;
         return;
     }
@@ -162,7 +159,6 @@ function popUp() {
             title: "Invalid subject!",
             iconColor: "#FFA31A",
         });
-        subject.focus();
         isValid = false;
         return;
     }
@@ -173,7 +169,6 @@ function popUp() {
             title: "Invalid message!",
             iconColor: "#FFA31A",
         });
-        message.focus();
         isValid = false;
         return;
     }
@@ -185,6 +180,25 @@ function popUp() {
             title: "Send Message Successfully",
             iconColor: "#FFA31A",
         });
+
+        // Send the form data using fetch
+        fetch("https://formsubmit.co/ajax/jingfeilaw@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: fullName.value,
+                email: email.value,
+                phone: phone.value,
+                subject: subject.value,
+                message: message.value
+            })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
 
         // Clear all input fields
         [fullName, email, phone, subject, message].forEach(field => field.value = '');
@@ -251,3 +265,9 @@ window.onload = function() {
         homeSection.scrollIntoView({ behavior: 'smooth' }); // For smooth scrolling
     }
 };
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+});
