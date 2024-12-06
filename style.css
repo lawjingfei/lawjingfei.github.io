@@ -621,6 +621,7 @@ hr {
     font-size: 2.2rem;
     margin-top: 3%;
     margin-bottom: 5%;
+    line-height: 28px;
 }
 
 .headingTools {
@@ -665,6 +666,10 @@ hr {
 
 .slider:hover .item {
     animation-play-state: paused !important;
+    filter: grayscale(1);
+}
+
+.slider .item:hover {
     filter: grayscale(0);
 }
 
